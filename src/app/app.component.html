@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col sm-6">
+      <div>
+        <h3>Data en tabla</h3>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre completo</th>
+            <th>Telefono</th>
+            <th>Nacionalidad</th>
+            <th>Genero</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let persona of people">
+            <td>{{persona.name.first}} {{persona.name.last}}</td>
+            <td>{{persona.phone}}</td>
+            <td>{{persona.nat}}</td>
+            <td>{{persona.gender}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col sm-6">
+      <div>
+        <h3>Data en Chart</h3>
+      </div>
+      <canvas id="genderChart" width="500" height="500"></canvas>
+    </div>
+  </div>
+</div>
